@@ -21,18 +21,18 @@ public class EurekaServerEnabled_MS {
 		SpringApplication.run(EurekaServerEnabled_MS.class, args);
 	}
 	
-	@Bean
-	public EurekaInstanceConfigBean eurekaInstanceConfigBean(InetUtils utils) {
-
-		final EurekaInstanceConfigBean instance = new EurekaInstanceConfigBean(utils);
-		AmazonInfo info = AmazonInfo.Builder.newBuilder().autoBuild("eureka");
-		instance.setHostname(info.get(AmazonInfo.MetaDataKey.publicHostname));
-		instance.setIpAddress(info.get(AmazonInfo.MetaDataKey.publicIpv4));
-		instance.setDataCenterInfo(info);
-		instance.setNonSecurePort(port);
-
-		return instance;
-	}
+//	@Bean
+//	public EurekaInstanceConfigBean eurekaInstanceConfigBean(InetUtils utils) {
+//
+//		final EurekaInstanceConfigBean instance = new EurekaInstanceConfigBean(utils);
+//		AmazonInfo info = AmazonInfo.Builder.newBuilder().autoBuild("eureka");
+//		instance.setHostname(info.get(AmazonInfo.MetaDataKey.publicHostname));
+//		instance.setIpAddress(info.get(AmazonInfo.MetaDataKey.publicIpv4));
+//		instance.setDataCenterInfo(info);
+//		instance.setNonSecurePort(port);
+//
+//		return instance;
+//	}
 
 }
 
